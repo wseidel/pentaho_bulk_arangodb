@@ -21,20 +21,23 @@ OBSERVAÇÕES:
  - O ArangoDB utilizado pra este exemplo estava sem autenticação. 
  - Foi utilizado uma instalação do ArangoDB do Docker. Veja aqui o [ArangoDB DockerImage](https://hub.docker.com/r/arangodb/arangodb/)
  - Se precisar fornecer mais memória pro PDI, utilize: ```export PENTAHO_DI_JAVA_OPTIONS=-Xmx4096m``` antes de executá-lo. Neste exemplo forneci 4GB.
- - O Bulk está sendo realizado via HTTPPost. Para saber mais, veja [aqui na documentação do ArangoDB](https://docs.arangodb.com/2.8/HttpBulkImports/)
+ - O Bulk está sendo realizado via HTTP Post. Para saber mais, veja [aqui na documentação do ArangoDB](https://docs.arangodb.com/2.8/HttpBulkImports/)
 
 ## Exemplo de uso:
 
-Uma vez dentro da pasta do PDI, '/data-integration' ou tê-lo no PATH, excutar:
+Uma vez dentro da pasta do PDI, '/data-integration' ou tê-lo no PATH, executar:
 
 ```
 ./pan.sh  \
     -file  ~/workspaces/exemplo_arango/load_logs_to_arango.ktr     \
-    -param FOLDER_IN=/home/wseidel/workspaces/aRepositorios_PDI/rafa_arango/logs  \
+    -param FOLDER_IN=/home/wseidel/workspaces/aRepositorios_PDI/rafanovello/logs  \
     -param MASK_IN=.*log \
     -param ARANGO_URL=http://localhost:8529/  \
     -param BULK_SIZE=2000
 ```
 
+### Agradecimento
+
+Este projeto foi motivado pelo post blog do [@rafaelnovello](http://rafanovello.blogspot.com.br/2017/08/brincando-de-big-data-e-data-mining.html) . 
 
 
