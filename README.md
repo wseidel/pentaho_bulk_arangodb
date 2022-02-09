@@ -7,7 +7,7 @@ Este é um exemplo de projeto de como fazer inclusão em lote (Bulk insert) no b
 
 O esquema deste exemplo se resume na seguinte figura:
 
-[![N|Solid](visao_geral.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](visao_geral.png)]
 
 ## Como utilizar:
 
